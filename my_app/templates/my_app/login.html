@@ -1,0 +1,19 @@
+{% extends 'my_app/base.html' %}
+
+{% block content %}
+<div class="col-6 col-md-6">
+	<h2>Login</h2>
+<form method="POST">
+ {% csrf_token %}
+  <div class="form-group">
+    <input type="text" class="form-control" placeholder="Enter Yor Name" 
+    name="username">
+  </div>
+  <div class="form-group"> 
+    <input type="password" class="form-control" placeholder="Enter password"
+     name="password">
+  </div>
+  <button type="submit" class="btn btn-primary">Login</button>
+</form>
+</div>
+{% endblock %}
